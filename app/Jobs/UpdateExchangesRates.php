@@ -66,7 +66,7 @@ class UpdateExchangesRates implements ShouldQueue
      */
     protected function makeRequest(string $requestCoin, Collection $quoteCoins): string
     {
-        return '{"disclaimer":"Usage subject to terms: https://openexchangerates.org/terms","license":"https://openexchangerates.org/license","timestamp":1548853200,"base":"' . $requestCoin . '","rates":{"CAD":1.32271,"EUR":0.874813,"GBP":0.76377,"JPY":109.42725,"USD":1}} ';
+       // Example result '{"disclaimer":"Usage subject to terms: https://openexchangerates.org/terms","license":"https://openexchangerates.org/license","timestamp":1548853200,"base":"' . $requestCoin . '","rates":{"CAD":1.32271,"EUR":0.874813,"GBP":0.76377,"JPY":109.42725,"USD":1}} ';
         $client = new Client();
         $return = null;
         try {

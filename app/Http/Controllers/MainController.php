@@ -15,7 +15,6 @@ class MainController extends Controller
      */
     public function index()
     {
-        UpdateExchangesRates::dispatchNow();
         $activeCurrencies = Currency::active()->has('availableExchanges')->orderBy('name')->get();
 
         $availableExchanges = $activeCurrencies->map(function (Currency $item) {
